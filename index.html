@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>UIClient</title>
+    <style>
+
+    @keyframes fadeout {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+    }
+
+    .app1 {
+            animation: fadeout 0.5s;
+    }
+
+  .app {
+        -webkit-user-select: none;
+        -webkit-app-region: drag;
+
+          /* Cover the whole window */
+          /*height: 100%;*/
+
+          /* Make sure this matches the native window background color that you pass to
+          * electron.BrowserWindow({...}), otherwise your app startup will look janky. */
+
+          /* Smoother startup */
+          /*animation: fadeout 4s;*/
+
+          background: rgba(171, 171, 171,1);
+      }
+
+    </style>
+  </head>
+ <body class="app">
+
+   <div>
+     <button onclick="connectToUIEngine()">connect</button>
+  </div>
+
+   <div>
+     <button onclick="showOverlay1()">overlay1</button>
+     <button onclick="showOverlay1()">overlay2</button>
+     <button onclick="showOverlay1()">CircularOverlay1</button>
+     <button onclick="showOverlay1()">CircularOverlay2</button>
+  </div>
+
+  <div>
+    <button onclick="closeOverlay1()">close1</button>
+    <button onclick="closeOverlay1()">close2</button>
+    <button onclick="closeOverlay1()">close3</button>
+    <button onclick="closeOverlay1()">close4</button>
+ </div>
+
+ <div>
+   <button onclick="fadeOutOverlay1()">fadeout</button>
+ </div>
+
+ <script src="./index.js"> </script>
+ <script>window.$ = window.jQuery = require('./jquery-3.1.1.min.js');</script>
+
+</body>
+</html>
