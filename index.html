@@ -13,10 +13,10 @@
     }
 
     .app1 {
-            animation: fadeout 0.5s;
+            animation: fadeout 3.0s;
     }
 
-  .app {
+ .app {
         -webkit-user-select: none;
         -webkit-app-region: drag;
 
@@ -33,16 +33,18 @@
       }
 
     </style>
+    <link rel="stylesheet" href="css/photon.min.css">
   </head>
  <body class="app">
 
    <div>
-     <button onclick="connectToUIEngine()">connect</button>
+     <button onclick="connectToUIEngine()">connect1</button>
+     <button onclick="connectToUIEngine()">connect2</button>
   </div>
 
    <div>
      <button onclick="showOverlay1()">overlay1</button>
-     <button onclick="showOverlay1()">overlay2</button>
+     <button onclick="showOverlay2()">overlay2</button>
      <button onclick="showOverlay1()">CircularOverlay1</button>
      <button onclick="showOverlay1()">CircularOverlay2</button>
   </div>

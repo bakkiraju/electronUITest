@@ -1,0 +1,33 @@
+@keyframes fadeout {
+    from {
+      opacity: 0.6;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
+.app {
+  /* Disable text selection, or your app will feel like a web page */
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+
+  /* Cover the whole window */
+  height: 100%;
+
+  /* Make sure this matches the native window background color that you pass to
+  * electron.BrowserWindow({...}), otherwise your app startup will look janky. */
+  background: rgba(171, 171, 171,0.2);
+}
+
+.app1 {
+  /* Disable text selection, or your app will feel like a web page */
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+
+  /* Cover the whole window */
+  height: 100%;
+
+  /* Smoother startup */
+  animation: fadeout 6s;
+}
