@@ -12,13 +12,18 @@
         }
     }
 
+    /*#trava { text-align: center; }
+    #fadeout {float : right;}
+    #tap {float : left;}
+    #rotate {display: inline;}*/
+
     .app1 {
             animation: fadeout 3.0s;
     }
 
  .app {
-        -webkit-user-select: none;
-        -webkit-app-region: drag;
+        /*-webkit-user-select: none;*/
+        /*-webkit-app-region: drag;*/
 
           /* Cover the whole window */
           /*height: 100%;*/
@@ -34,34 +39,51 @@
 
     </style>
     <link rel="stylesheet" href="css/photon.min.css">
+    <link rel="stylesheet" href="css/bootstrap-slider.min.css">
+</script>
   </head>
  <body class="app">
 
    <div>
-     <button onclick="connectToUIEngine()">connect1</button>
-     <button onclick="connectToUIEngine()">connect2</button>
+     <button onclick="connectToUIEngine()">connect to Overlay Engine</button>
   </div>
 
    <div>
      <button onclick="showOverlay1()">overlay1</button>
      <button onclick="showOverlay2()">overlay2</button>
-     <button onclick="showOverlay1()">CircularOverlay1</button>
-     <button onclick="showOverlay1()">CircularOverlay2</button>
+     <button onclick="showCircularOverlay1()">CircularOverlay1</button>
+     <button onclick="showMultiScreenOverlay()">MultiScreenOverlay</button>
   </div>
 
-  <div>
-    <button onclick="closeOverlay1()">close1</button>
-    <button onclick="closeOverlay1()">close2</button>
-    <button onclick="closeOverlay1()">close3</button>
-    <button onclick="closeOverlay1()">close4</button>
+  <div id="trava">
+    <div id="tap">
+      <button onclick="simulateTap()"><b>Simulate Trava Tap</b></button>
+    </div>
+
+    <div id="rotate">
+      <b>Simulate Trava Rotation : </b>
+      <input type="text" value="" data-slider-min="0" data-slider-max="35" data-slider-step="1"
+          data-slider-value="15" data-slider-id="RC" id="travaProxy" data-slider-tooltip="hide"
+          data-slider-handle="triangle"/>
+    </div>
+
+    <div id ="fadeout">
+      <button onclick="fadeOutOverlay1()"><b>Simulate Trava Leave</b></button>
+    </div>
+
  </div>
+
+
+
 
  <div>
-   <button onclick="fadeOutOverlay1()">fadeout</button>
+   <button onclick="closeOverlay1()">close connection</button>
  </div>
 
- <script src="./index.js"> </script>
- <script>window.$ = window.jQuery = require('./jquery-3.1.1.min.js');</script>
+ <!-- <div>
+   <button onclick="stressTest()">stressTest</button>
+ </div> -->
 
+ <script src="./index.js"> </script>
 </body>
 </html>
